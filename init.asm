@@ -3,8 +3,9 @@
 start:
     mov si, INIT_STARTING
     call printf
-
-    cmp dl, 80h
+    
+    ; checks if needs to install
+    cmp byte [BOOT_DRIVE], 0x80
     jg .install ; jump if drive is not hard disk
 
     ; tests keyboard
@@ -27,6 +28,7 @@ start:
     call printf
     jmp $
 
+BOOT_DRIVE: equ 0x7fff
 %include "installer.asm"
 %include "read_key.asm"
 %include "command.asm"

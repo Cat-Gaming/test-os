@@ -15,3 +15,6 @@ make_hd_img:
 
 run:
 	qemu-system-x86_64 -fda os.bin -hda os_hd.img
+
+boot_hd:
+	qemu-system-x86_64 -hda os_hd.img

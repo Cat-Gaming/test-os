@@ -38,6 +38,6 @@ KERNEL_LOAD_STR: db "Kernel loaded.", 0xd, 0xa, 0
 KERNEL_PANIC_STR: db "Kernel panic!", 0xd, 0xa, 0
 INIT_LOADED: db "Init loaded!", 0xd, 0xa, 0
 PRINT_ERROR_MSG: db "Error: ", 0
-BOOT_DRIVE: db 0x00
 
-times 512 - ($-$$) db 0
+times 511 - ($-$$) db 0
+BOOT_DRIVE: db 0x00
