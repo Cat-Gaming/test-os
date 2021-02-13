@@ -1,5 +1,3 @@
-%include "read_key.asm"
-
 ; shell key loop
 shell_key_loop:
     call read_key

@@ -1,5 +1,3 @@
-%include "read_key.asm"
-
 ; a basic keyboard handler
 basic_key_loop:
     call read_key
